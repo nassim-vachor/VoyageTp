@@ -27,6 +27,8 @@
 		D4CAB19D1C68C2D000DD1202 /* TP1_swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAB19C1C68C2D000DD1202 /* TP1_swiftUITests.swift */; };
 		D4CAB1AD1C68E90200DD1202 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAB1AC1C68E90200DD1202 /* Voyage.swift */; };
 		D4CAB1AE1C68E90200DD1202 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAB1AC1C68E90200DD1202 /* Voyage.swift */; };
+		D4DC484B1C88978A0058AA63 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D4DC484A1C88978A0058AA63 /* Default-568h@2x.png */; };
+		D4DC484D1C889A410058AA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DC484C1C889A410058AA63 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		D4CAB19C1C68C2D000DD1202 /* TP1_swiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TP1_swiftUITests.swift; sourceTree = "<group>"; };
 		D4CAB19E1C68C2D000DD1202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAB1AC1C68E90200DD1202 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
+		D4DC484A1C88978A0058AA63 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		D4DC484C1C889A410058AA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 		D4CAB1701C68C2CF00DD1202 = {
 			isa = PBXGroup;
 			children = (
+				D4DC484A1C88978A0058AA63 /* Default-568h@2x.png */,
 				D4CAB1AC1C68E90200DD1202 /* Voyage.swift */,
 				D44FD0671C8447CD00999437 /* Lieu.swift */,
 				D44FD06A1C8447EE00999437 /* LieuSet.swift */,
@@ -129,6 +134,7 @@
 				D4CAB1831C68C2D000DD1202 /* Assets.xcassets */,
 				D4CAB1851C68C2D000DD1202 /* LaunchScreen.storyboard */,
 				D423961C1C827A3C00EA7762 /* MyTableViewCell.swift */,
+				D4DC484C1C889A410058AA63 /* Images.xcassets */,
 			);
 			path = "TP1-swift";
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 				TargetAttributes = {
 					D4CAB1781C68C2CF00DD1202 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 8EBQDPWKSF;
 					};
 					D4CAB18C1C68C2D000DD1202 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -233,7 +240,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D4CAB1741C68C2CF00DD1202 /* Build configuration list for PBXProject "	" */;
+			buildConfigurationList = D4CAB1741C68C2CF00DD1202 /* Build configuration list for PBXProject "Voyage" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CAB1871C68C2D000DD1202 /* LaunchScreen.storyboard in Resources */,
+				D4DC484D1C889A410058AA63 /* Images.xcassets in Resources */,
+				D4DC484B1C88978A0058AA63 /* Default-568h@2x.png in Resources */,
 				D4CAB1841C68C2D000DD1202 /* Assets.xcassets in Resources */,
 				D4CAB1821C68C2D000DD1202 /* Main.storyboard in Resources */,
 			);
@@ -440,24 +449,26 @@
 		D4CAB1A21C68C2D000DD1202 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TP1-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "projet1.com.TP1-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D4CAB1A31C68C2D000DD1202 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/TP1-swiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "projet1.com.TP1-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -512,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4CAB1741C68C2CF00DD1202 /* Build configuration list for PBXProject "	" */ = {
+		D4CAB1741C68C2CF00DD1202 /* Build configuration list for PBXProject "Voyage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4CAB19F1C68C2D000DD1202 /* Debug */,

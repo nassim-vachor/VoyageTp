@@ -118,7 +118,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             
           }*/
     
-        cell.myCellLabel.text = self.ens.tableau[indexPath.row].nom
+        cell.myCellLabel.text = self.ens.tableau[ens.indexVoyageNom(self.myTextField.text!)].nom
+        
         
             //cell.myCellLabel.text = "other item"
        return cell

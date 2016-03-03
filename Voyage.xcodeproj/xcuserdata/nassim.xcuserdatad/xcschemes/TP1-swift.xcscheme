@@ -55,7 +55,7 @@
             BlueprintIdentifier = "D4CAB1781C68C2CF00DD1202"
             BuildableName = "TP1-swift.app"
             BlueprintName = "TP1-swift"
-            ReferencedContainer = "container:&#9;.xcodeproj">
+            ReferencedContainer = "container:Voyage.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "D4CAB1781C68C2CF00DD1202"
             BuildableName = "TP1-swift.app"
             BlueprintName = "TP1-swift"
-            ReferencedContainer = "container:&#9;.xcodeproj">
+            ReferencedContainer = "container:Voyage.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>

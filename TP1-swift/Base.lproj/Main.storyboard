@@ -53,7 +53,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-Zl-1WY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-Zl-1WY">
                                                     <rect key="frame" x="0.0" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,10 +61,10 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ofb-Zl-1WY" secondAttribute="bottom" id="8de-bE-qSs"/>
-                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="leading" secondItem="1tw-E4-ZgX" secondAttribute="leadingMargin" id="eMe-X4-Jbd"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ofb-Zl-1WY" secondAttribute="trailing" id="g9O-u5-aJl"/>
-                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="top" secondItem="1tw-E4-ZgX" secondAttribute="topMargin" id="t68-dF-KYS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ofb-Zl-1WY" secondAttribute="bottom" constant="3" id="8de-bE-qSs"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="leading" secondItem="1tw-E4-ZgX" secondAttribute="leadingMargin" constant="-8" id="eMe-X4-Jbd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ofb-Zl-1WY" secondAttribute="trailing" constant="-8" id="g9O-u5-aJl"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="top" secondItem="1tw-E4-ZgX" secondAttribute="topMargin" constant="3" id="t68-dF-KYS"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
