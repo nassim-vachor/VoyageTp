@@ -46,14 +46,41 @@
                                 <rect key="frame" x="20" y="125" width="560" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCellId" id="xHR-Hy-d1X" customClass="MyTableViewCell" customModule="TP1_swift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="50" id="xHR-Hy-d1X" customClass="CustomHeaderCell" customModule="TP1_swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xHR-Hy-d1X" id="1tw-E4-ZgX">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-Zl-1WY">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofb-Zl-1WY">
+                                                    <rect key="frame" x="8" y="8" width="544" height="43"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="leading" secondItem="1tw-E4-ZgX" secondAttribute="leadingMargin" id="AML-yQ-lCP"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="trailing" secondItem="1tw-E4-ZgX" secondAttribute="trailingMargin" id="aOW-Bm-J9w"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="top" secondItem="1tw-E4-ZgX" secondAttribute="topMargin" constant="-8" id="jgt-4F-naq"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="centerX" secondItem="1tw-E4-ZgX" secondAttribute="centerX" id="taI-dB-c9z"/>
+                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="centerY" secondItem="1tw-E4-ZgX" secondAttribute="centerY" id="veO-xg-uTO"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Ofb-Zl-1WY" secondAttribute="bottom" constant="-8" id="yvA-K3-flH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="headerLabel" destination="Ofb-Zl-1WY" id="Rpf-ks-MsG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCellId" rowHeight="53" id="J1q-sv-4y6" customClass="MyTableViewCell" customModule="TP1_swift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78" width="560" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J1q-sv-4y6" id="zf9-Jm-njv">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-bF-F6w">
                                                     <rect key="frame" x="0.0" y="11" width="560" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,14 +88,14 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ofb-Zl-1WY" secondAttribute="bottom" constant="3" id="8de-bE-qSs"/>
-                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="leading" secondItem="1tw-E4-ZgX" secondAttribute="leadingMargin" constant="-8" id="eMe-X4-Jbd"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ofb-Zl-1WY" secondAttribute="trailing" constant="-8" id="g9O-u5-aJl"/>
-                                                <constraint firstItem="Ofb-Zl-1WY" firstAttribute="top" secondItem="1tw-E4-ZgX" secondAttribute="topMargin" constant="3" id="t68-dF-KYS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AHD-bF-F6w" secondAttribute="bottom" constant="3" id="DtX-Pg-vP3"/>
+                                                <constraint firstItem="AHD-bF-F6w" firstAttribute="top" secondItem="zf9-Jm-njv" secondAttribute="topMargin" constant="3" id="YC3-Z3-w8L"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AHD-bF-F6w" secondAttribute="trailing" constant="-8" id="rhy-Ed-I4m"/>
+                                                <constraint firstItem="AHD-bF-F6w" firstAttribute="leading" secondItem="zf9-Jm-njv" secondAttribute="leadingMargin" constant="-8" id="yb9-65-tbI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="myCellLabel" destination="Ofb-Zl-1WY" id="rsO-M1-1dz"/>
+                                            <outlet property="myCellLabel" destination="AHD-bF-F6w" id="MVN-3O-dCe"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

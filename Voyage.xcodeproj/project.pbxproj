@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A0C8F71C89F03A00AAF86F /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0C8F61C89F03A00AAF86F /* CustomHeaderCell.swift */; };
 		D423961D1C827A3C00EA7762 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423961C1C827A3C00EA7762 /* MyTableViewCell.swift */; };
 		D423961F1C827CCB00EA7762 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D423961E1C827CCB00EA7762 /* TableViewController.swift */; };
 		D43E87C71C7C757A00892991 /* TestEnsembleVoyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E87C61C7C757A00892991 /* TestEnsembleVoyage.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91A0C8F61C89F03A00AAF86F /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
 		D423961C1C827A3C00EA7762 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		D423961E1C827CCB00EA7762 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		D43E87C61C7C757A00892991 /* TestEnsembleVoyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestEnsembleVoyage.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				D4CAB17C1C68C2D000DD1202 /* AppDelegate.swift */,
 				D4CAB17E1C68C2D000DD1202 /* ViewController.swift */,
+				91A0C8F61C89F03A00AAF86F /* CustomHeaderCell.swift */,
 				D4CAB1801C68C2D000DD1202 /* Main.storyboard */,
 				D423961E1C827CCB00EA7762 /* TableViewController.swift */,
 				D4CAB1831C68C2D000DD1202 /* Assets.xcassets */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4CAB1AD1C68E90200DD1202 /* Voyage.swift in Sources */,
+				91A0C8F71C89F03A00AAF86F /* CustomHeaderCell.swift in Sources */,
 				D44FD0681C8447CD00999437 /* Lieu.swift in Sources */,
 				D423961F1C827CCB00EA7762 /* TableViewController.swift in Sources */,
 				D44FD06B1C8447EE00999437 /* LieuSet.swift in Sources */,

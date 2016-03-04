@@ -12,10 +12,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
     //var myData = [String]()
     let l2 : LieuSet = LieuSet()
-    let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
-    let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
-    let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
-    let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+    let l3 : Lieu = Lieu(aname: "Barcelone",date: "13/03/2016")
+    let l4 : Lieu = Lieu(aname: "Madrid",date: "14/03/2016")
+    let l5 : Lieu = Lieu(aname: "Valence",date: "15/03/2016")
+    let l6 : Lieu = Lieu(aname: "Séville",date: "16/03/2016")
+    let l : LieuSet = LieuSet()
+    let l7 : Lieu = Lieu(aname: "Paris",date: "13/03/2016")
+    let l8 : Lieu = Lieu(aname: "Montpellier",date: "14/03/2016")
+    let l9 : Lieu = Lieu(aname: "Marseille",date: "15/03/2016")
+    let l10 : Lieu = Lieu(aname: "Lyon",date: "16/03/2016")
     var ens : EnsembleVoyage = EnsembleVoyage()
     
     
@@ -47,8 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         //recuperer le text du textField
         //ajouter le texte comme une nvelle donnée de ma classe modele(classe metier)
         // car c pas au controleur de gerer les données (MVC)
-        if (self.myTextField.text != ""){
-        if let stext = self.myTextField.text{
+        //if (self.myTextField.text != ""){
+       // if let stext = self.myTextField.text{
             //self.myData.append(stex)
             //let x: String = "\(voy) \(stext)"
             /*let l2 : LieuSet = LieuSet()
@@ -72,8 +77,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             
             //self.myTableView.reloadData() // recharger les données
           */
-        }
-        }
+       // }
+        //}
             
         }
 
@@ -85,10 +90,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         if (self.myTextField.text != ""){
             if let stext = self.myTextField.text{
                 let l2 : LieuSet = LieuSet()
-                let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
-                let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
-                let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
-                let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+                let l3 : Lieu = Lieu(aname: "Barcelone",date: "13/03/2016")
+                let l4 : Lieu = Lieu(aname: "Madrid",date: "14/03/2016")
+                let l5 : Lieu = Lieu(aname: "Valence",date: "15/03/2016")
+                let l6 : Lieu = Lieu(aname: "Séville",date: "16/03/2016")
                 l2.ajouterLieu(l3)
                 l2.ajouterLieu(l4)
                 l2.ajouterLieu(l5)
@@ -108,9 +113,22 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         return true;
     }
     // MARK: - Table view data source
-    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-         return 1    }
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
+        l.ajouterLieu(l7)
+        l.ajouterLieu(l8)
+        l.ajouterLieu(l9)
+        l.ajouterLieu(l10)
+        let voy1 : Voyage = Voyage(aname:"France", lieux:l)
+        let voy : Voyage = Voyage(aname:"Espagne", lieux:l2)
+        self.ens.ajouterVoyage(voy)
+        self.ens.ajouterVoyage(voy1)
+        return self.ens.tableau.count
+    }
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        /* ens0.ajouterVoyage(voy3)
@@ -143,16 +161,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
       cell.myCellLabel.text = self.myData[indexPath.row-self.ens.tableau.count]
             
           }*/
-        l2.ajouterLieu(l3)
-        l2.ajouterLieu(l4)
-        l2.ajouterLieu(l5)
-        l2.ajouterLieu(l6)
         
-        let voy : Voyage = Voyage(aname:"Espagne", lieux:l2)
-        self.ens.ajouterVoyage(voy)
        // for ( var i = 0; i<indexPath.row; i++){
     
-        cell.myCellLabel.text = ens.tableau[0].ensLieu.lieux[0].nom
+        cell.myCellLabel.text = ens.tableau[indexPath.section].ensLieu.lieux[indexPath.row].nom
         
         
           //mmmmmmmm
@@ -164,7 +176,31 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             //cell.myCellLabel.text = "other item"
        return cell
     }
-
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let  headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! CustomHeaderCell
+        headerCell.backgroundColor = UIColor.lightGrayColor()
+        
+        headerCell.headerLabel.text =  ens.tableau[section].nom
+        
+        /*switch (section) {
+        case 0:
+            headerCell.headerLabel.text = "Europe";
+            //return sectionHeaderView
+        case 1:
+            headerCell.headerLabel.text = "Asia";
+            //return sectionHeaderView
+        case 2:
+            headerCell.headerLabel.text = "South America";
+            //return sectionHeaderView
+        default:
+            headerCell.headerLabel.text = "Other";
+        }*/
+        
+        return headerCell
 
 }
+    
+    
 
+}
