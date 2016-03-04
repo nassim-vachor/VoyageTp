@@ -127,6 +127,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         self.ens.ajouterVoyage(voy)
         self.ens.ajouterVoyage(voy1)
         return self.ens.tableau.count
+        //vvvvv
     }
     
     
