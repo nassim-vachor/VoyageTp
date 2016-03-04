@@ -11,10 +11,18 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
 
     //var myData = [String]()
+    let l2 : LieuSet = LieuSet()
+    let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+    let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+    let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+    let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
     var ens : EnsembleVoyage = EnsembleVoyage()
+    
+    
     /*let voy3 : Voyage = Voyage(aname: "Espagne")
     let voy4 : Voyage = Voyage(aname: "Allemagne")
     let voy5 : Voyage = Voyage(aname: "Suisse")*/
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +51,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         if let stext = self.myTextField.text{
             //self.myData.append(stex)
             //let x: String = "\(voy) \(stext)"
-            let voy : Voyage = Voyage(aname: stext)
+            /*let l2 : LieuSet = LieuSet()
+            let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+            let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+            let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+            let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+            l2.ajouterLieu(l3)
+            l2.ajouterLieu(l4)
+            l2.ajouterLieu(l5)
+            l2.ajouterLieu(l6)
+            let voy : Voyage = Voyage(aname: stext, lieux:l2)
             self.ens.ajouterVoyage(voy)
             
             //self.myData.insert(stext, atIndex: 0)
@@ -54,7 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             
             
             //self.myTableView.reloadData() // recharger les données
-            
+          */
         }
         }
             
@@ -67,7 +84,17 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         if (self.myTextField.text != ""){
             if let stext = self.myTextField.text{
-                let voy : Voyage = Voyage(aname: stext)
+                let l2 : LieuSet = LieuSet()
+                let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+                let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+                let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+                let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+                l2.ajouterLieu(l3)
+                l2.ajouterLieu(l4)
+                l2.ajouterLieu(l5)
+                l2.ajouterLieu(l6)
+                let voy : Voyage = Voyage(aname: stext, lieux: l2)
+                
                 self.ens.ajouterVoyage(voy)
                 
                 //self.myData.insert(stext, atIndex: 0)
@@ -83,8 +110,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     // MARK: - Table view data source
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+         return 1    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        /* ens0.ajouterVoyage(voy3)
@@ -93,10 +119,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
        
         //return self.myData.count
         
-        return self.ens.tableau.count
-        
-        
+        //return self.ens.tableau[0].ensLieu.lieux.count
+        return 4
     }
+ 
     
     
      func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -117,8 +143,21 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
       cell.myCellLabel.text = self.myData[indexPath.row-self.ens.tableau.count]
             
           }*/
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
+        
+        let voy : Voyage = Voyage(aname:"Espagne", lieux:l2)
+        self.ens.ajouterVoyage(voy)
+       // for ( var i = 0; i<indexPath.row; i++){
     
-        cell.myCellLabel.text = self.ens.tableau[ens.indexVoyageNom(self.myTextField.text!)].nom
+        cell.myCellLabel.text = ens.tableau[0].ensLieu.lieux[0].nom
+        
+        
+            
+            
+        //}
         
         
             //cell.myCellLabel.text = "other item"

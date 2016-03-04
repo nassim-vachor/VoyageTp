@@ -112,7 +112,16 @@ class LieuSet{
         else {return self.lieux[i]}
     }
     
-    
+    func enleverLieuxDate(dat: String)
+    {
+        
+        for (var i = 0; i<self.lieux.count; i++){
+            if( dat == self.lieux[i].sdate){
+                self.lieux.removeAtIndex(i)
+                i=i-1
+            }
+        }
+    }
     
     func enleverLieuNom(s: String, x: String)
     {

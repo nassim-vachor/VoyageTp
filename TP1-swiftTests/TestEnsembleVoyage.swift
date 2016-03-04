@@ -45,8 +45,17 @@ class TestEnsembleVoyage: XCTestCase {
     
    
     func testAjouterVoyage(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
     let ens1 : EnsembleVoyage = EnsembleVoyage()
-         let voy : Voyage = Voyage(aname: "mali")
+        let voy : Voyage = Voyage(aname: "mali", lieux:l2)
         let index = ens1.ajouterVoyage(voy)
         XCTAssertNotNil(index)
         print("count=\(index)")
@@ -56,7 +65,7 @@ class TestEnsembleVoyage: XCTestCase {
          ens1.ajouterVoyage(voy)
         XCTAssertEqual(ens1.tableau.count, 1, "ERREUR")
     // comme on veut ajouter un voyage qui existe deja alors le nbre d'elemnt reste à 1 car l'ajout ne se fait pas
-        let voy2 : Voyage = Voyage(aname: "Algerie")
+        let voy2 : Voyage = Voyage(aname: "Algerie", lieux: l2)
         ens1.ajouterVoyage(voy2)
         XCTAssertEqual(ens1.tableau.count, 2, "ERREUR")
         //verification du tri par ordre alphabetique
@@ -64,8 +73,18 @@ class TestEnsembleVoyage: XCTestCase {
         }
     
     func testAppartientVoyageNom(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
+        
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
+        let voy3 : Voyage = Voyage(aname: "mali",lieux: l2)
         XCTAssertFalse(ens2.appartientVoyageNom(voy3),"normalement le voyage n'appartient pas à l'ensemble")
         ens2.ajouterVoyage(voy3)
         XCTAssertTrue(ens2.appartientVoyageNom(voy3),"normalement le voyage appartient à l'ensemble")
@@ -73,17 +92,35 @@ class TestEnsembleVoyage: XCTestCase {
     }
     
     func testAppartientVoyageNom2(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
+        let voy3 : Voyage = Voyage(aname: "mali", lieux: l2)
         XCTAssertFalse(ens2.appartientVoyageNom2("mali"),"normalement le voyage n'appartient pas à l'ensemble")
         ens2.ajouterVoyage(voy3)
         XCTAssertTrue(ens2.appartientVoyageNom2("mali"),"normalement le voyage appartient à l'ensemble")
     }
     
     func testindexVoyageVoyageIndex(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
-        let voy4 : Voyage = Voyage(aname: "Algerie")
+        let voy3 : Voyage = Voyage(aname: "mali", lieux: l2)
+        let voy4 : Voyage = Voyage(aname: "Algerie", lieux: l2)
         ens2.ajouterVoyage(voy3)
         ens2.ajouterVoyage(voy4)
         // test des indexVoyage
@@ -95,9 +132,18 @@ class TestEnsembleVoyage: XCTestCase {
     }
     
     func testindexVoyageNom(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
-        let voy4 : Voyage = Voyage(aname: "Algerie")
+        let voy3 : Voyage = Voyage(aname: "mali", lieux: l2)
+        let voy4 : Voyage = Voyage(aname: "Algerie", lieux: l2)
         ens2.ajouterVoyage(voy3)
         ens2.ajouterVoyage(voy4)
         // test des indexVoyage
@@ -105,10 +151,19 @@ class TestEnsembleVoyage: XCTestCase {
         XCTAssertEqual(ens2.indexVoyageNom("mali"), 1, "ERREUR")
         }
     func testrechercherVoyageNom(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
-        let voy4 : Voyage = Voyage(aname: "Algerie")
-        let voy5 : Voyage = Voyage(aname: "")
+        let voy3 : Voyage = Voyage(aname: "mali", lieux: l2)
+        let voy4 : Voyage = Voyage(aname: "Algerie", lieux: l2)
+        let voy5 : Voyage = Voyage(aname: "", lieux: l2)
         ens2.ajouterVoyage(voy3)
         ens2.ajouterVoyage(voy4)
         ens2.ajouterVoyage(voy5)
@@ -120,11 +175,20 @@ class TestEnsembleVoyage: XCTestCase {
     }
 
         func testenleverVoyage(){
+            let l2 : LieuSet = LieuSet()
+            let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+            let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+            let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+            let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+            l2.ajouterLieu(l3)
+            l2.ajouterLieu(l4)
+            l2.ajouterLieu(l5)
+            l2.ajouterLieu(l6)
             let ens2 : EnsembleVoyage = EnsembleVoyage()
-            let voy3 : Voyage = Voyage(aname: "mali")
-            let voy4 : Voyage = Voyage(aname: "Algerie")
-            let voy5 : Voyage = Voyage(aname: "France")
-            let voy6 : Voyage = Voyage(aname: "Suisse")
+            let voy3 : Voyage = Voyage(aname: "mali", lieux: l2)
+            let voy4 : Voyage = Voyage(aname: "Algerie", lieux: l2)
+            let voy5 : Voyage = Voyage(aname: "France", lieux: l2)
+            let voy6 : Voyage = Voyage(aname: "Suisse", lieux: l2)
             ens2.ajouterVoyage(voy3)
             ens2.ajouterVoyage(voy4)
             ens2.ajouterVoyage(voy5)
@@ -144,11 +208,20 @@ class TestEnsembleVoyage: XCTestCase {
             
     }
     func testenleverVoyageNom(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "14/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "15/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
         let ens2 : EnsembleVoyage = EnsembleVoyage()
-        let voy3 : Voyage = Voyage(aname: "mali")
-        let voy4 : Voyage = Voyage(aname: "Algerie")
-        let voy5 : Voyage = Voyage(aname: "France")
-        let voy6 : Voyage = Voyage(aname: "Suisse")
+        let voy3 : Voyage = Voyage(aname: "mali", lieux: l2 )
+        let voy4 : Voyage = Voyage(aname: "Algerie",lieux: l2)
+        let voy5 : Voyage = Voyage(aname: "France", lieux: l2)
+        let voy6 : Voyage = Voyage(aname: "Suisse", lieux: l2)
         ens2.ajouterVoyage(voy3)
         ens2.ajouterVoyage(voy4)
         ens2.ajouterVoyage(voy5)

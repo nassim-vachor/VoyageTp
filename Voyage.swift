@@ -13,7 +13,10 @@ class Voyage  {
     /// - parameter aname: le nom du voyage
     /// - precondition: le nom ne doit pas etre une chaine ""
     /// - returns: un voyage initialisé si les preconditions sont respectees, sinon le voyage est vide, cad son nom est vide
-    init(aname: String){ //constructeur
+    var ensLieu: LieuSet
+    
+    init(aname: String, lieux: LieuSet){ //constructeur
+        self.ensLieu = lieux
         self.nom = aname
     }
     

@@ -170,9 +170,25 @@ class TestLieuSet: XCTestCase {
         l2.enleverLieuNom("Algerie",x: "14/03/2016")
         XCTAssertEqual(l2.lieux.count, i-2 , "ERREUR")
         XCTAssertFalse(l2.appartientLieuNom(l4))
-        
-
     }
-
+    func testenleverLieuDate(){
+        let l2 : LieuSet = LieuSet()
+        let l3 : Lieu = Lieu(aname: "mali",date: "13/03/2016")
+        let l4 : Lieu = Lieu(aname: "Algerie",date: "13/03/2016")
+        let l5 : Lieu = Lieu(aname: "France",date: "13/03/2016")
+        let l6 : Lieu = Lieu(aname: "Suisse",date: "16/03/2016")
+        l2.ajouterLieu(l3)
+        l2.ajouterLieu(l4)
+        l2.ajouterLieu(l5)
+        l2.ajouterLieu(l6)
+        let i = l2.lieux.count
+        l2.enleverLieuxDate("13/03/2016")
+        XCTAssertEqual(l2.lieux.count, i-3 , "ERREUR")
+        /*
+        XCTAssertFalse(l2.appartientLieuNom2("mali",t: "13/03/2016"))
+        l2.enleverLieuNom("Algerie",x: "14/03/2016")
+        XCTAssertEqual(l2.lieux.count, i-2 , "ERREUR")
+        XCTAssertFalse(l2.appartientLieuNom(l4))*/
+    }
     
 }
