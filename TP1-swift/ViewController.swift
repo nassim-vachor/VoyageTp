@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource{
 
-    //var myData = [String]()
+    var text : [String?] = []
+    var i: Int? = nil
     let l2 : LieuSet = LieuSet()
     let l3 : Lieu = Lieu(aname: "Barcelone",date: "13/03/2016")
     let l4 : Lieu = Lieu(aname: "Madrid",date: "14/03/2016")
@@ -170,10 +171,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
        // for ( var i = 0; i<indexPath.row; i++){
     
         cell.myCellLabel.text = ens.tableau[indexPath.section].ensLieu.lieux[indexPath.row].nom
+          i = indexPath.row
+        text.append (cell.myCellLabel.text)
         
         
-          //mmmmmmmm
-        // nassim est un boti et il se ùmet facilement en colere et apres il me frappe hum
+        
+        
+     
             
         //}
         
@@ -187,7 +191,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         headerCell.backgroundColor = UIColor.lightGrayColor()
         
         headerCell.headerLabel.text =  ens.tableau[section].nom
-        
+       
         /*switch (section) {
         case 0:
             headerCell.headerLabel.text = "Europe";
@@ -205,7 +209,18 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         return headerCell
 
 }
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier{
+            switch identifier{
+            case "firstSegue":
+        let SecondVC = segue.destinationViewController as! SecondViewController
+        SecondVC.receverd = text[0]!
+                
+                
+                
+            default: break
+            }
+        }
+    }
 
 }

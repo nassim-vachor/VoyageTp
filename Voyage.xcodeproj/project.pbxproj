@@ -29,6 +29,10 @@
 		D4CAB1AD1C68E90200DD1202 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAB1AC1C68E90200DD1202 /* Voyage.swift */; };
 		D4CAB1AE1C68E90200DD1202 /* Voyage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CAB1AC1C68E90200DD1202 /* Voyage.swift */; };
 		D4DC484D1C889A410058AA63 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4DC484C1C889A410058AA63 /* Images.xcassets */; };
+		D4E2AF651C90606900EA6A52 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E2AF641C90606900EA6A52 /* SecondTableViewCell.swift */; };
+		D4E2AF661C90606900EA6A52 /* SecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E2AF641C90606900EA6A52 /* SecondTableViewCell.swift */; };
+		D4E2AF681C9060AC00EA6A52 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E2AF671C9060AC00EA6A52 /* SecondViewController.swift */; };
+		D4E2AF691C9060AC00EA6A52 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E2AF671C9060AC00EA6A52 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +76,8 @@
 		D4CAB19E1C68C2D000DD1202 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4CAB1AC1C68E90200DD1202 /* Voyage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voyage.swift; sourceTree = "<group>"; };
 		D4DC484C1C889A410058AA63 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D4E2AF641C90606900EA6A52 /* SecondTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondTableViewCell.swift; sourceTree = "<group>"; };
+		D4E2AF671C9060AC00EA6A52 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondViewController.swift; path = ../SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +134,10 @@
 			children = (
 				D4CAB17C1C68C2D000DD1202 /* AppDelegate.swift */,
 				D4CAB17E1C68C2D000DD1202 /* ViewController.swift */,
+				D4E2AF671C9060AC00EA6A52 /* SecondViewController.swift */,
 				91A0C8F61C89F03A00AAF86F /* CustomHeaderCell.swift */,
 				D4CAB1801C68C2D000DD1202 /* Main.storyboard */,
+				D4E2AF641C90606900EA6A52 /* SecondTableViewCell.swift */,
 				D423961E1C827CCB00EA7762 /* TableViewController.swift */,
 				D4CAB1831C68C2D000DD1202 /* Assets.xcassets */,
 				D4CAB1851C68C2D000DD1202 /* LaunchScreen.storyboard */,
@@ -293,6 +301,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E2AF681C9060AC00EA6A52 /* SecondViewController.swift in Sources */,
+				D4E2AF651C90606900EA6A52 /* SecondTableViewCell.swift in Sources */,
 				D4CAB1AD1C68E90200DD1202 /* Voyage.swift in Sources */,
 				91A0C8F71C89F03A00AAF86F /* CustomHeaderCell.swift in Sources */,
 				D44FD0681C8447CD00999437 /* Lieu.swift in Sources */,
@@ -310,12 +320,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4C434241C7766DA009D1B18 /* EnsembleVoyage.swift in Sources */,
+				D4E2AF661C90606900EA6A52 /* SecondTableViewCell.swift in Sources */,
 				D44FD06C1C8447EE00999437 /* LieuSet.swift in Sources */,
 				D43E87C71C7C757A00892991 /* TestEnsembleVoyage.swift in Sources */,
 				D4C479AB1C864A9C00325C3B /* TestLieu.swift in Sources */,
 				D4CAB1AE1C68E90200DD1202 /* Voyage.swift in Sources */,
 				D4CAB1921C68C2D000DD1202 /* TP1_swiftTests.swift in Sources */,
 				D44FD0691C8447CD00999437 /* Lieu.swift in Sources */,
+				D4E2AF691C9060AC00EA6A52 /* SecondViewController.swift in Sources */,
 				D4C479AD1C86508700325C3B /* TestLieuSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
